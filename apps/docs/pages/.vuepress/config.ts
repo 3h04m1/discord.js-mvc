@@ -6,6 +6,7 @@ export default defineUserConfig({
     lang: 'en-US',
     title: 'Discord.js MVC',
     description: 'A MVC framework for discord.js',
+    base: '/discord.js-mvc/',
     theme: defaultTheme({
         sidebarDepth: 2,
         navbar: [
@@ -26,7 +27,8 @@ export default defineUserConfig({
                 link: 'https://github.com/'
             }
         ],
-        sidebar
+        sidebar,
+        
     }),
     plugins: [
         mdEnhancePlugin({
