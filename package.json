@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "lerna run dev --stream",
     "docs:dev": "lerna run dev --scope docs",
+    "docs:build":"lerna run build --scope docs",
     "build": "lerna run build"
   }
 }
