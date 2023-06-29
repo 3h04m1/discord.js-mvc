@@ -1,3 +1,3 @@
-import { type Interaction, type BaseInteraction } from 'discord.js';
-export type Controller<T extends BaseInteraction = Interaction> = (req: T, params: Record<string, any>) => Promise<void>;
+import { BaseContext } from "../base/Context";
+export type Controller<T extends BaseContext = BaseContext> = (ctx: T) => Promise<void>;
 //# sourceMappingURL=index.d.ts.map

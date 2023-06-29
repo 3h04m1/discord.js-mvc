@@ -1,9 +1,9 @@
-import { type BaseInteraction } from 'discord.js';
 import { MiddlewareManager } from '../../Middleware';
 import { type Middleware } from '../../Middleware/types';
 import RouteManager from './RouteManager';
 import { type Controller } from '../../Controllers';
-export declare class Route<T extends BaseInteraction = BaseInteraction> {
+import { BaseContext } from '../../base/Context';
+export declare class Route<T extends BaseContext = BaseContext> {
     name: string;
     controller: Controller<T>;
     middlewareManager: MiddlewareManager<T>;

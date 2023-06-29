@@ -7,3 +7,8 @@ export function hasCustomId(
 ): interaction is BaseInteraction & { customId: string }{
   return 'customId' in interaction
 }
+
+export type MaybePromise<T = any> = T | Promise<T>
+
+export type MaybeArray<T = any> = T | Array<T>
+  

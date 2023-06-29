@@ -1,4 +1,5 @@
-import { type Interaction, type BaseInteraction } from 'discord.js'
+import { BaseContext } from "../base/Context";
+
 
 export type NextFunction = () => Promise<void>
 
@@ -10,8 +11,7 @@ export type NextFunction = () => Promise<void>
  * @param params - Additional parameters that can be passed to the middleware.
  * @returns A promise that resolves when the middleware processing is complete.
  */
-export type Middleware<T extends BaseInteraction = Interaction> = (
+export type Middleware<T extends BaseContext = BaseContext> = (
     interaction: T,
     next: NextFunction,
-    params?: Record<string, any>
   ) => Promise<void>;

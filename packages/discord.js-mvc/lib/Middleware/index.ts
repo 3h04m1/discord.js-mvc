@@ -1,17 +1,16 @@
 import {
   type Controller 
 } from '../Controllers'
-import { type Interaction, type BaseInteraction } from 'discord.js'
 import { type Middleware } from './types'
-import RouteManager from '../Router/Route/RouteManager'
+import { BaseContext } from '../base/Context'
 export { type Middleware } from './types'
 
 
 /**
- * Manages the execution of middlewares for processing interactions.
- * @template T - The type of interaction to be processed. Defaults to `Interaction`.
+ * Manages the execution of middlewares for processing ctxs.
+ * @template T - The type of ctx to be processed. Defaults to `ctx`.
  */
-export class MiddlewareManager<T extends BaseInteraction = Interaction> {
+export class MiddlewareManager<T extends BaseContext = BaseContext> {
   private readonly middlewares: Array<Middleware<T>> = [];
 
   /**
@@ -23,28 +22,23 @@ export class MiddlewareManager<T extends BaseInteraction = Interaction> {
   }
 
   /**
-   * Applies the registered middlewares to process the interaction.
-   * @param interaction - The interaction to be processed.
+   * Applies the registered middlewares to process the ctx.
+   * @param ctx - The Context to be processed.
    * @param controller - The controller function to be invoked after middleware processing.
    * @param routeName - Optional route name to extract params for route-specific middleware processing.
    * @returns A promise that resolves when the middleware processing is complete.
    */
   public async apply(
-    interaction: T,
+    ctx: T,
     controller: Controller<T>,
-    routeName?: string
   ): Promise<void> {
-    let params: Record<string, any> = {};
-    if (routeName != null) {
-      params = RouteManager.extractParams(interaction, routeName);
-    }
     const middlewareStack = [...this.middlewares];
     const runner = async (): Promise<void> => {
       const middleware = middlewareStack.shift();
       if (middleware != null) {
-        await middleware(interaction, runner, params);
+        await middleware(ctx, runner);
       } else {
-        await controller(interaction, params);
+        await controller(ctx);
       }
     };
     await runner();

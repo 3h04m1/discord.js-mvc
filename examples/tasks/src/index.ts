@@ -19,6 +19,12 @@ const client = new Client({
     ]
 });
 
+client.on("messageCreate", async (message) => {
+    if (message.content === "!ping") {
+        await message.reply("Pong!");
+    }
+});
+
 client.on("ready", () => {
     console.log("Ready!");
 });
