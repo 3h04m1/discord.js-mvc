@@ -1,0 +1,32 @@
+{
+    "name": "@discordjs-mvc/session",
+    "version": "0.0.0",
+    "description": "Session plugin for discordjs-mvc",
+    "keywords": [
+        "session",
+        "discord",
+        "bot",
+        "discord",
+        "plugin"
+    ],
+    "author": "max <max>",
+    "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",
+    "license": "MIT",
+    "main": "lib/index.ts",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
+    },
+    "scripts": {
+        "test": "node ./__tests__/session.test.js"
+    },
+    "bugs": {
+        "url": "https://github.com/3h04m1/discord.js-mvc/issues"
+    }
+}
