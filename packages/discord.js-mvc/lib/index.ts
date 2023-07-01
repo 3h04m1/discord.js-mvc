@@ -7,5 +7,6 @@ export { type Middleware } from './Middleware/types'
 export { type Controller } from './Controllers'
 // utils
 export { registerGlobalCommands, registerGuildCommands} from './utils/registerCommands'
+export {BaseContext,InteractionContext,MessageContext} from './base/Context'
 
 

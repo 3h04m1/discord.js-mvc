@@ -1,8 +1,10 @@
-import { type Route } from '.';
-import { type Middleware } from '../../Middleware/types';
-export interface IRouteGroupData {
+import { BaseContext } from '../../base/Context';
+import { Middleware } from '../../Middleware/types';
+import { Route } from '.';
+export type RouteName = string | RegExp | string;
+export interface IRouteGroupData<T extends BaseContext = BaseContext> {
     prefix?: string;
-    middlewares?: Array<Middleware<any>>;
-    routes: Array<Route<any>>;
+    middlewares?: Array<Middleware<T>>;
+    routes: Array<Route<T>>;
 }
 //# sourceMappingURL=types.d.ts.map

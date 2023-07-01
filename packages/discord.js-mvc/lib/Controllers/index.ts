@@ -1,4 +1,5 @@
 import { BaseContext } from "../base/Context";
+import { MaybePromise } from "../types";
 
 /**
  * Represents a controller function for handling interactions.
@@ -25,4 +26,4 @@ import { BaseContext } from "../base/Context";
 
 export type Controller<T extends BaseContext = BaseContext> = (
   ctx: T,
-) => Promise<void>;
+) => MaybePromise<void>;

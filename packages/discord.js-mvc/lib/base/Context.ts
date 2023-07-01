@@ -2,17 +2,31 @@ import { Message, BaseInteraction, Interaction, Base } from 'discord.js'
 import { hasCustomId } from '../types'
 import { extractParams } from '../utils/extractParams'
 
+export function isMsg(
+  data: Message | BaseInteraction
+): data is Message {
+  return 'content' in data
+}
+
+export function isInteraction(
+  data: Message | BaseInteraction
+): data is BaseInteraction {
+  return data instanceof BaseInteraction
+}
+
 /**
  * Represents a plugin function that modifies a context.
  * @template T - The type of the context to be modified.
  * @param ctx - The context to be modified.
  */
-type Plugin<T> = (ctx: T) => void
+export type Plugin<T extends BaseContextCls = BaseContext> = (ctx: T) => void
 
 /**
  * Base class for the context.
  */
 class BaseContextCls {
+  public interaction?: BaseInteraction
+  public message?: Message
   /**
    * Parameters extracted from the route processing.
    */
@@ -23,7 +37,7 @@ class BaseContextCls {
    * @returns True if the context is an interaction context, false otherwise.
    */
   public isInteraction(): this is InteractionContext {
-    return this instanceof InteractionContext
+    return this.interaction !== undefined
   }
 
   /**
@@ -31,7 +45,7 @@ class BaseContextCls {
    * @returns True if the context is a message context, false otherwise.
    */
   public isMessage(): this is MessageContext {
-    return this instanceof MessageContext
+    return this.message !== undefined
   }
 
   /**
@@ -63,12 +77,13 @@ class BaseContextCls {
  * Represents an interaction context.
  * @template T - The type of interaction contained in the context.
  */
-class InteractionContext<
-  T extends BaseInteraction = Interaction
+export class InteractionContext<
+  T extends BaseInteraction = BaseInteraction
 > extends BaseContextCls {
   /**
    * The interaction object.
    */
+  declare public message: never;
   constructor(public interaction: T) {
     super()
   }
@@ -77,10 +92,11 @@ class InteractionContext<
 /**
  * Represents a message context.
  */
-class MessageContext extends BaseContextCls {
+export class MessageContext extends BaseContextCls {
   /**
    * The message object.
    */
+  declare public interaction: never;
   constructor(public message: Message) {
     super()
   }
@@ -121,20 +137,23 @@ function contextConstructor(
 ): MessageContext
 
 function contextConstructor(
-  interaction: Interaction | Message,
+  interaction: BaseInteraction | Message,
   plugins: Array<InteractionPlugin> | Array<MessagePlugin>,
   routePath?: string
 ): InteractionContext | MessageContext {
   let ctx: InteractionContext | MessageContext
-  if (interaction instanceof Message) {
+  if (isMsg(interaction)) {
     ctx = new MessageContext(interaction)
     ctx.use(...(plugins as Array<MessagePlugin>))
-  } else {
-    ctx = new InteractionContext(interaction)
-    ctx.setParams(routePath)
-    ctx.use(...(plugins as Array<InteractionPlugin>))
+    return ctx
   }
-  return ctx
+  if (isInteraction(interaction)) {
+    ctx = new InteractionContext(interaction)
+    ctx.use(...(plugins as Array<InteractionPlugin>))
+    ctx.setParams(routePath)
+    return ctx
+  }
+  throw new Error('Invalid context')
 }
 
 /**

@@ -2,7 +2,7 @@ import { MiddlewareManager } from '../../Middleware'
 import { type Middleware } from '../../Middleware/types'
 import RouteManager from './RouteManager'
 import { type Controller } from '../../Controllers'
-import { BaseContext } from '../../base/Context'
+import { BaseContext, InteractionContext } from '../../base/Context'
 
 
 /**
@@ -10,7 +10,7 @@ import { BaseContext } from '../../base/Context'
  *
  * @template T - The type of the interaction for this route (defaults to BaseInteraction).
  */
-export class Route<T extends BaseContext = BaseContext> {
+export class Route<T extends BaseContext = BaseContext>{
   /**
    * The manager for handling middlewares associated with this route.
    */
@@ -27,7 +27,8 @@ export class Route<T extends BaseContext = BaseContext> {
    * @param {string} name - The name of the route.
    * @param {Controller<T>} controller - The controller associated with the route.
    */
-  constructor(public name: string, public controller: Controller<T>) {}
+  
+  constructor(public name: T extends InteractionContext ? string : RegExp, public controller: Controller<T>) {}
 
   /**
    * Adds middlewares to be executed for this route.
@@ -46,7 +47,7 @@ export class Route<T extends BaseContext = BaseContext> {
    * @param {T} interaction - The interaction triggering the route.
    * @returns {Promise<void>} A Promise that resolves when the route execution is completed.
    */
-  public async run(interaction: T): Promise<void> {
-    await this.middlewareManager.apply(interaction, this.controller)
+  public async run(ctx: T): Promise<void> {
+    await this.middlewareManager.apply(ctx, this.controller)
   }
 }

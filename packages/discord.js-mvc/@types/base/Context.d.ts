@@ -1,18 +1,24 @@
 import { Message, BaseInteraction, Interaction, Base } from 'discord.js';
-type Plugin<T> = (ctx: T) => void;
+export declare function isMsg(data: Message | BaseInteraction): data is Message;
+export declare function isInteraction(data: Message | BaseInteraction): data is BaseInteraction;
+export type Plugin<T extends BaseContextCls = BaseContext> = (ctx: T) => void;
 declare class BaseContextCls {
+    interaction?: BaseInteraction;
+    message?: Message;
     params: Record<string, any>;
     isInteraction(): this is InteractionContext;
     isMessage(): this is MessageContext;
     use(...plugins: Plugin<this>[]): this;
     setParams(routePath?: string): void;
 }
-declare class InteractionContext<T extends BaseInteraction = Interaction> extends BaseContextCls {
+export declare class InteractionContext<T extends BaseInteraction = BaseInteraction> extends BaseContextCls {
     interaction: T;
+    message: never;
     constructor(interaction: T);
 }
-declare class MessageContext extends BaseContextCls {
+export declare class MessageContext extends BaseContextCls {
     message: Message;
+    interaction: never;
     constructor(message: Message);
 }
 type InteractionPlugin = Plugin<InteractionContext>;

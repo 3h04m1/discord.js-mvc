@@ -1,52 +1,52 @@
 {
-  "name": "discord.js-mvc",
-  "version": "0.0.0",
-  "description": "Discord.js MVC utilities for building bots using the MVC pattern",
-  "author": "max.vojktov <max.vojtkov@gmail.com>",
-  "types": "@types",
-  "keywords": [
-    "discord",
-    "discord.js",
-    "mvc",
-    "bot",
-    "discord.js-mvc",
-    "discordjs-mvc",
-    "discord-mvc"
-  ],
-  "homepage": "",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "devDependencies": {
-    "@jest/globals": "^29.5.0",
-    "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard-with-typescript": "^35.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "jest": "^29.5.0",
-    "nodemon": "^2.0.22",
-    "prettier": "2.8.8",
-    "ts-jest": "^29.1.0",
-    "ts-node": "^10.9.1",
-    "typescript": "*"
-  },
-  "dependencies": {
-    "discord.js": "^14.11.0",
-    "path-to-regexp": "^6.2.1"
-  },
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
-  },
-  "scripts": {
-    "build": "tsc"
-  }
+    "name": "discord.js-mvc",
+    "version": "0.0.0",
+    "description": "Discord.js MVC utilities for building bots using the MVC pattern",
+    "author": "max.vojktov <max.vojtkov@gmail.com>",
+    "types": "@types",
+    "keywords": [
+        "discord",
+        "discord.js",
+        "mvc",
+        "bot",
+        "discord.js-mvc",
+        "discordjs-mvc",
+        "discord-mvc"
+    ],
+    "homepage": "https://discordjs-mvc.js.org/",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "directories": {
+        "*": "lib",
+        "test": "__tests__"
+    },
+    "devDependencies": {
+        "@jest/globals": "^29.5.0",
+        "@typescript-eslint/eslint-plugin": "^5.50.0",
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-config-standard-with-typescript": "^35.0.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-n": "^15.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "jest": "^29.5.0",
+        "nodemon": "^2.0.22",
+        "prettier": "2.8.8",
+        "ts-jest": "^29.1.0",
+        "ts-node": "^10.9.1",
+        "typescript": "*"
+    },
+    "dependencies": {
+        "discord.js": "^14.11.0",
+        "path-to-regexp": "^6.2.1"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.yarnpkg.com"
+    },
+    "scripts": {
+        "build": "tsc"
+    }
 }
