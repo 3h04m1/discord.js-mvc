@@ -1,6 +1,6 @@
 {
     "name": "@discordjs-mvc/logger",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "> TODO: description",
     "author": "max <max>",
     "homepage": "https://discordjs-mvc.js.org",
@@ -39,5 +39,5 @@
         "chalk": "^5.3.0",
         "winston": "^3.9.0"
     },
-    "gitHead": "c62d1b2822bdaf9d87bec7f02d95526e663802b1"
+    "gitHead": "f75c96e3efb7c5683c0dac09fb62e6bc264037f6"
 }
