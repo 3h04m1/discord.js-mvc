@@ -37,5 +37,9 @@
     "bugs": {
         "url": "https://github.com/3h04m1/discord.js-mvc/issues"
     },
-    "gitHead": "bcec65c9be512005541d50e8bfacf9fffef1e88f"
+    "gitHead": "30b4133bc5ba0468a282e5436c0c28ef0c60429d",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    }
 }

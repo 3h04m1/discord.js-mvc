@@ -44,10 +44,11 @@
         "lib"
     ],
     "publishConfig": {
-        "registry": "https://registry.yarnpkg.com"
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
     },
     "scripts": {
         "build": "tsc"
     },
-    "gitHead": "bcec65c9be512005541d50e8bfacf9fffef1e88f"
+    "gitHead": "30b4133bc5ba0468a282e5436c0c28ef0c60429d"
 }
