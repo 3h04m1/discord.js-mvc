@@ -27,7 +27,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: yarn
+        run: yarn install --frozen-lockfile
 
       # run build script
       - name: Build VuePress site

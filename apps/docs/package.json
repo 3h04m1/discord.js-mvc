@@ -22,6 +22,7 @@
     },
     "devDependencies": {
         "vuepress": "^2.0.0-beta.63",
+        "vuepress-vite": "2.0.0-beta.63",
         "vuepress-plugin-md-enhance": "^2.0.0-beta.226"
     }
 }
