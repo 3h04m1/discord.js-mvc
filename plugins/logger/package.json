@@ -1,11 +1,12 @@
 {
     "name": "@discordjs-mvc/logger",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "> TODO: description",
     "author": "max <max>",
     "homepage": "https://discordjs-mvc.js.org",
     "license": "ISC",
     "main": "lib/logger.js",
+    "private": false,
     "keywords": [
         "discord",
         "discord.js",
@@ -38,5 +39,5 @@
         "chalk": "^5.3.0",
         "winston": "^3.9.0"
     },
-    "gitHead": "c6b587687799c2cb78594dcb277377a2e14d23b5"
+    "gitHead": "c62d1b2822bdaf9d87bec7f02d95526e663802b1"
 }
