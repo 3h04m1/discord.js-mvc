@@ -1,4 +1,4 @@
-// src/index.ts
+// index.ts
 
 import {Client, GatewayIntentBits, Events} from 'discord.js'
 

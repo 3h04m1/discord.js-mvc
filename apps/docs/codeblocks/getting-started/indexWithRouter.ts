@@ -1,4 +1,4 @@
-// src/index.ts
+// index.ts
 
 import {Client, GatewayIntentBits, Events} from 'discord.js'
 import { router } from './router'
@@ -11,6 +11,10 @@ const client = new Client({
 
 client.on(Events.ClientReady, (client) => {
     console.log(`Logged in as ${client.user?.tag}`)
+})
+
+client.on(Events.MessageCreate, async (message) => {
+    await router.handle(message)
 })
 
 client.on(Events.InteractionCreate, async (interaction) => {

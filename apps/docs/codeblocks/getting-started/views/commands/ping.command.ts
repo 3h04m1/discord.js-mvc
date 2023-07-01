@@ -1,4 +1,4 @@
-// src/views/commands/ping.ts
+// views/commands/ping.command.ts
 
 import {SlashCommandBuilder} from 'discord.js'
 

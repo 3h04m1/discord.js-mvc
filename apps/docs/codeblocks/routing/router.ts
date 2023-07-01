@@ -1,10 +1,11 @@
-import { Router, Route} from 'discord.js-mvc'
-import {CommandInteraction} from 'discord.js'
+import { Router, Route } from 'discord.js-mvc'
+import { ChatInputCommandInteraction } from 'discord.js'
+import { Context } from '.context'
 
-export const router: Router = new Router()
+export const router = new Router()
     .add(
-        new Route<CommandInteraction>('ping', async(interaction) => {
-            await interaction.reply('Pong!')
-        })
+        new Route<Context<ChatInputCommandInteraction>>('ping', async (ctx) => {
+            await ctx.interaction.reply('Pong!')
+        }),
         // ... more routes
     )
