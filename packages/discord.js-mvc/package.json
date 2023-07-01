@@ -1,6 +1,6 @@
 {
     "name": "discord.js-mvc",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Discord.js MVC utilities for building bots using the MVC pattern",
     "author": "max.vojktov <max.vojtkov@gmail.com>",
     "types": "@types",
@@ -48,5 +48,5 @@
     "scripts": {
         "build": "tsc"
     },
-    "gitHead": "6923ebab1374b93a065f0ea335e37dc77962f160"
+    "gitHead": "c6b587687799c2cb78594dcb277377a2e14d23b5"
 }

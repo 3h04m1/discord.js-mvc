@@ -1,6 +1,6 @@
 {
     "name": "@discordjs-mvc/session",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Session plugin for discordjs-mvc",
     "keywords": [
         "session",
@@ -36,5 +36,5 @@
     "bugs": {
         "url": "https://github.com/3h04m1/discord.js-mvc/issues"
     },
-    "gitHead": "6923ebab1374b93a065f0ea335e37dc77962f160"
+    "gitHead": "c6b587687799c2cb78594dcb277377a2e14d23b5"
 }
