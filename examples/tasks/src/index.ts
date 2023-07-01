@@ -16,13 +16,12 @@ const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
     ]
 });
 
 client.on("messageCreate", async (message) => {
-    if (message.content === "!ping") {
-        await message.reply("Pong!");
-    }
+    await router.handle(message);
 });
 
 client.on("ready", () => {
