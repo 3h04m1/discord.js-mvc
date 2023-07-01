@@ -3,12 +3,20 @@
     "version": "0.0.0",
     "description": "> TODO: description",
     "author": "max <max>",
-    "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",
+    "homepage": "https://discordjs-mvc.js.org",
     "license": "ISC",
     "main": "lib/logger.js",
+    "keywords": [
+        "discord",
+        "discord.js",
+        "mvc",
+        "bot",
+        "discord.js-mvc",
+        "discordjs-mvc",
+        "discord-mvc"
+    ],
     "directories": {
-        "lib": "lib",
-        "test": "__tests__"
+        "lib": "lib"
     },
     "files": [
         "lib"

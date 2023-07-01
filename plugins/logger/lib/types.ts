@@ -1,8 +1,7 @@
 import { Middleware } from "discord.js-mvc";
-import { BaseContext } from "discord.js-mvc/lib/base/Context";
 import { Logger as WinstonLogger } from "winston";
 
-export type LoggerFlavor<T extends BaseContext> = T & {
+export type LoggerFlavor = {
     logger: WinstonLogger
 }
 

@@ -1,11 +1,33 @@
-# `logger`
+# Logger plugin for [Discordjs MVC](https://discordjs-mvc.js.org)
 
-> TODO: description
+This plugin adds a logger to your bot. The logger is based on [winston](https://www.npmjs.com/package/winston).
+
+## Installation
+
+```bash
+npm i @discordjs-mvc/logger
+```
 
 ## Usage
 
-```
-const logger = require('logger');
+```ts
+import { Router } from 'discordjs-mvc'
+import { logger } from '@discordjs-mvc/logger'
 
-// TODO: DEMONSTRATE API
+const loggerPlugin =
+  logger()
+  // winston logger options
+
+const router = new Router()
+  .plugin(logger.plugin) // adds the plugin to the context object
+  .use(logger.middleware) // automatically logs all interactions
+```
+
+## Extend your context with the logger flavor
+To safely extend your context with the logger flavor, you can use the following code:
+```ts
+import { BaseContext } from 'discordjs-mvc'
+import { LoggerFlavor } from '@discordjs-mvc/logger'
+
+export type Context = BaseContext & LoggerFlavor
 ```
