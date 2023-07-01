@@ -1,23 +1,25 @@
 {
-  "name": "root",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*",
-    "apps/*",
-    "plugins/*"
-  ],
-  "devDependencies": {
-    "lerna": "^7.1.1"
-  },
-  "files": [
-    "src",
-    "@types"
-  ],
-  "scripts": {
-    "dev": "lerna run dev --stream",
-    "docs:dev": "lerna run dev --scope docs",
-    "docs:build": "lerna run build --scope docs",
-    "build": "lerna run build"
-  }
+    "name": "root",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "examples/*",
+        "apps/*",
+        "plugins/*"
+    ],
+    "devDependencies": {
+        "lerna": "^7.1.1"
+    },
+    "files": [
+        "src",
+        "@types"
+    ],
+    "scripts": {
+        "dev": "lerna run dev --stream",
+        "docs:dev": "lerna run dev --scope docs",
+        "docs:build": "lerna run build --scope docs",
+        "build": "lerna run build",
+        "publish": "yarn build && lerna publish --no-private"
+    },
+    "version": "1.0.0"
 }

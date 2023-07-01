@@ -1,38 +1,39 @@
 {
-  "name": "@discord.js-mvc/cli",
-  "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "max <max>",
-  "homepage": "",
-  "license": "MIT",
-  "main": "lib/cli.js",
-  "type": "module",
-  "bin": "dist/create-discord-mvc-bot.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
-  },
-  "scripts": {
-    "dev": "ts-node src/cli.ts",
-    "build": "tsc -p tsconfig.json"
-  },
-  "dependencies": {
-    "chalk": "^5.2.0",
-    "commander": "^10.0.1",
-    "execa": "^7.1.1",
-    "inquirer": "^9.2.7",
-    "validate-npm-package-name": "^5.0.0"
-  },
-  "devDependencies": {
-    "@types/inquirer": "^9.0.3",
-    "@types/validate-npm-package-name": "^4.0.0"
-  },
-  "engines": {
-    "node": ">=16"
-  }
+    "name": "@discord.js-mvc/cli",
+    "version": "1.0.0",
+    "description": "> TODO: description",
+    "author": "max <max>",
+    "homepage": "",
+    "license": "MIT",
+    "main": "lib/cli.js",
+    "type": "module",
+    "bin": "dist/create-discord-mvc-bot.js",
+    "private": true,
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.yarnpkg.com"
+    },
+    "scripts": {
+        "dev": "ts-node src/cli.ts",
+        "build": "tsc -p tsconfig.json"
+    },
+    "dependencies": {
+        "chalk": "^5.2.0",
+        "commander": "^10.0.1",
+        "execa": "^7.1.1",
+        "inquirer": "^9.2.7",
+        "validate-npm-package-name": "^5.0.0"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.3",
+        "@types/validate-npm-package-name": "^4.0.0"
+    },
+    "engines": {
+        "node": ">=16"
+    }
 }
