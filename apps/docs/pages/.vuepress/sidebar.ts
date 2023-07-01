@@ -2,24 +2,31 @@ import { SidebarConfig } from "vuepress";
 
 export const sidebar: SidebarConfig = [
     {
+        text: 'Home',
+        link: '/'
+    },
+    {
         text: 'Getting Started',
         children: [
-            '/installation',
-            '/guide/project-structure'
+            '/guide/getting-started/installation',
+            '/guide/getting-started/project-structure'
         ]
     },
     {
-        text: 'Guide',
+        text: 'Core Concepts',
+        link: '/guide/core-concepts/',
         children: [
-                '/guide/getting-started/',
-                '/guide/getting-started/routing',
-                '/guide/getting-started/controllers',
-                '/guide/getting-started/middleware',
-                '/guide/getting-started/models',
+                '/guide/core-concepts/routing',
+                '/guide/core-concepts/controllers',
+                '/guide/core-concepts/middleware',
+                '/guide/core-concepts/models',
+                '/guide/core-concepts/plugins',
             ]
     },
     {
         text: 'Examples',
-        children: []
+        children: [
+            '/examples/ping-pong',
+        ]
     }
 ]

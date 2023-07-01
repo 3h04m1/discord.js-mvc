@@ -6,7 +6,7 @@
   "dependencies": {
     "dedent-js": "^1.0.1",
     "discord.js": "^14.11.0",
-    "discord.js-mvc": "*",
+    "discord.js-mvc": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.1.6",
     "typeorm": "^0.3.16"

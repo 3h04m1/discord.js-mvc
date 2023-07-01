@@ -1,15 +1,15 @@
-import { type BaseInteraction } from 'discord.js';
 import { MiddlewareManager } from '../../Middleware';
 import { type Middleware } from '../../Middleware/types';
 import RouteManager from './RouteManager';
 import { type Controller } from '../../Controllers';
-export declare class Route<T extends BaseInteraction = BaseInteraction> {
-    name: string;
+import { BaseContext, InteractionContext } from '../../base/Context';
+export declare class Route<T extends BaseContext = BaseContext> {
+    name: T extends InteractionContext ? string : RegExp;
     controller: Controller<T>;
     middlewareManager: MiddlewareManager<T>;
     static manager: typeof RouteManager;
-    constructor(name: string, controller: Controller<T>);
+    constructor(name: T extends InteractionContext ? string : RegExp, controller: Controller<T>);
     use(...middlewares: Array<Middleware<T>>): Route<T>;
-    run(interaction: T): Promise<void>;
+    run(ctx: T): Promise<void>;
 }
 //# sourceMappingURL=index.d.ts.map

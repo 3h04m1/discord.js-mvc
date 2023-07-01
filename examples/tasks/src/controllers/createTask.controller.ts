@@ -3,8 +3,10 @@ import {ModalSubmitInteraction} from "discord.js"
 import { Task } from "../models/task.entity";
 import db from "../db";
 import taskCard from "../views/messages/taskCard.message";
+import { Context } from "../types";
 
-export const createTaskController: Controller<ModalSubmitInteraction> = async (interaction) => {
+export const createTaskController: Controller<Context<ModalSubmitInteraction>> = async (ctx) => {
+    const { interaction } = ctx;
     const data = {
         title: interaction.fields.getTextInputValue("title"),
         description: interaction.fields.getTextInputValue("description")

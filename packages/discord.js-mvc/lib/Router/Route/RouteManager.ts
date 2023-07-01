@@ -1,8 +1,5 @@
-import { type BaseInteraction } from 'discord.js'
 import { type Middleware } from '../../Middleware/types'
 import { type IRouteGroupData } from './types'
-import { hasCustomId } from '../../types'
-import { extractParams } from '../../utils/extractParams'
 import { type Route } from '.'
 
 /**
@@ -79,28 +76,6 @@ export default class RouteManager {
       route.use(middleware);
     }
     return new RouteManager().add(...routes);
-  }
-
-  /**
-   * Extracts parameters from an interaction based on a route pattern.
-   *
-   * @template T - The type of the interaction.
-   * @param {T} interaction - The interaction to extract parameters from.
-   * @param {string} routePattern - The pattern of the route.
-   * @returns {Record<string, any>} The extracted parameters.
-   * @throws {Error} If the interaction type is invalid.
-   */
-  public static extractParams<T extends BaseInteraction>(interaction: T, routePattern: string): Record<string, any> {
-    if (interaction.isCommand()) {
-      const params: Record<string, any> = {};
-      for (const option of interaction.options.data) {
-        params[option.name] = option.value;
-      }
-      return params;
-    } else if (hasCustomId(interaction)) {
-      return extractParams(interaction.customId, routePattern);
-    }
-    throw new Error('Invalid interaction type');
   }
 
   /**

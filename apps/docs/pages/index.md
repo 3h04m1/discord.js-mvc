@@ -16,6 +16,8 @@ The framework is designed to be simple and straightforward, allowing you to focu
 
 - **Extensibility:** The framework is highly extensible, enabling you to enhance its capabilities by creating custom plugins. This empowers you to tailor the framework to your specific requirements and introduce new features seamlessly.
 
+- **Plugins:** Discord.js MVC offers support for plugins with a built-in Context that wraps the Discord.js Interactions and Message Components APIs. This allows you to create plugins that can be used to extend the functionality of your bot. Dicord.js MVC also includes a small collection of plugins that can be used out of the box, also you can submit your own plugins to the [Discord.js MVC Plugins](https://github.com/3h04m1/discord.js-mvc)
+
 ## Getting Started and Tutorials
 
 To get started with Discord.js MVC, refer to the comprehensive [Getting Started](/docs/getting-started) guide. It will walk you through the initial setup and provide step-by-step instructions for creating your first bot using the framework.

@@ -16,7 +16,12 @@ const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
     ]
+});
+
+client.on("messageCreate", async (message) => {
+    await router.handle(message);
 });
 
 client.on("ready", () => {

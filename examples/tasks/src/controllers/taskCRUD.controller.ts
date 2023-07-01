@@ -4,13 +4,15 @@ import { Task } from "../models/task.entity";
 import db from "../db";
 import { newTaskModal } from "../views/modals/newTask.modal";
 import taskCard from "../views/messages/taskCard.message";
+import { Context } from "../types";
 
 const taskRepository = db.getRepository(Task);
 
 export class TaskCrud {
     
-    static deleteTask: Controller<ButtonInteraction> = async (interaction, params ) => {
-        const { taskId } = params;
+    static deleteTask: Controller<Context<ButtonInteraction>> = async (ctx) => {
+        const { taskId } = ctx.params;
+        const { interaction } = ctx;
         await interaction.deferReply();
         const task = await taskRepository.findOne({
             where: {
@@ -25,8 +27,9 @@ export class TaskCrud {
         });
     };
 
-    static editTask: Controller<ButtonInteraction> = async (interaction, params) => {
-        const { taskId } = params;
+    static editTask: Controller<Context<ButtonInteraction>> = async (ctx) => {
+        const { taskId } = ctx.params;
+        const { interaction } = ctx;
         const task = await taskRepository.findOne({
             where: {
                 id: parseInt(taskId)
@@ -43,8 +46,9 @@ export class TaskCrud {
         }))
     }
 
-    static editTaskModal: Controller<ModalSubmitInteraction> = async (interaction, params) => {
-        const { taskId } = params;
+    static editTaskModal: Controller<Context<ModalSubmitInteraction>> = async (ctx) => {
+        const { taskId } = ctx.params;
+        const { interaction } = ctx;
         const data = {
             title: interaction.fields.getTextInputValue("title"),
             description: interaction.fields.getTextInputValue("description")
@@ -69,8 +73,9 @@ export class TaskCrud {
         });
     };
 
-    static completeTask: Controller<ButtonInteraction> = async (interaction, params) => {
-        const { taskId } = params;
+    static completeTask: Controller<Context<ButtonInteraction>> = async (ctx) => {
+        const { taskId } = ctx.params;
+        const { interaction } = ctx;
         await interaction.deferReply();
         const task = await taskRepository.findOne({
             where: {

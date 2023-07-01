@@ -1,4 +1,5 @@
-import { type Interaction, type BaseInteraction } from 'discord.js'
+import { BaseContext } from "../base/Context";
+import { MaybePromise } from "../types";
 
 /**
  * Represents a controller function for handling interactions.
@@ -21,7 +22,8 @@ import { type Interaction, type BaseInteraction } from 'discord.js'
  *   // ...
  * };
  */
-export type Controller<T extends BaseInteraction = Interaction> = (
-  req: T,
-  params: Record<string, any>
-) => Promise<void>;
+
+
+export type Controller<T extends BaseContext = BaseContext> = (
+  ctx: T,
+) => MaybePromise<void>;

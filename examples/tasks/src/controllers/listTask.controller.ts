@@ -4,8 +4,10 @@ import db from "../db";
 import taskCard from "../views/messages/taskCard.message";
 import { ActionRowBuilder, ButtonBuilder, CommandInteraction } from "discord.js";
 import { completeTaskButton, deleteTaskButton, editTaskButton } from "../views/buttons/task.button";
+import { Context } from "../types";
 
-export const listTaskController: Controller<CommandInteraction> = async (interaction) => {
+export const listTaskController: Controller<Context<CommandInteraction>> = async (ctx) => {
+    const {interaction} = ctx;
     const taskRepository = db.getRepository(Task);
     const tasks = await taskRepository.find({
         where: {
