@@ -7,7 +7,14 @@
         "discord",
         "bot",
         "discord",
-        "plugin"
+        "plugin",
+        "discord",
+        "discord.js",
+        "mvc",
+        "bot",
+        "discord.js-mvc",
+        "discordjs-mvc",
+        "discord-mvc"
     ],
     "author": "max <max>",
     "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",

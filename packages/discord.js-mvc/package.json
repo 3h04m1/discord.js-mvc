@@ -17,8 +17,7 @@
     "license": "MIT",
     "main": "dist/index.js",
     "directories": {
-        "*": "lib",
-        "test": "__tests__"
+        "*": "lib"
     },
     "devDependencies": {
         "@jest/globals": "^29.5.0",
