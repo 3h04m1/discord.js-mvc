@@ -20,10 +20,6 @@ The framework is designed to be simple and straightforward, allowing you to focu
 
 ## Getting Started and Tutorials
 
-To get started with Discord.js MVC, refer to the comprehensive [Getting Started](/docs/getting-started) guide. It will walk you through the initial setup and provide step-by-step instructions for creating your first bot using the framework.
+To get started with Discord.js MVC, refer to the comprehensive [Getting Started](https://discordjs-mvf.js.org/docs/getting-started) guide. It will walk you through the initial setup and provide step-by-step instructions for creating your first bot using the framework.
 
-Once you are familiar with the basics, explore the [Tutorials](/docs/guide) section, which covers various topics and demonstrates different aspects of building bots with the framework. These tutorials will help you dive deeper into the framework's features and guide you through more advanced use cases.
-
-::: warning
-Please note that Discord.js MVC is currently under active development. While all the existing features are functional, it's possible that future updates may introduce breaking changes. Stay tuned for updates and check the documentation regularly for the latest information.
-:::
+Once you are familiar with the basics, explore the [Tutorials](https://discordjs-mvf.js.org/docs/guide) section, which covers various topics and demonstrates different aspects of building bots with the framework. These tutorials will help you dive deeper into the framework's features and guide you through more advanced use cases.
