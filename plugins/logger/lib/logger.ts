@@ -1,7 +1,7 @@
 import winston from 'winston'
 import { Logger } from './types'
 import chalk from 'chalk'
-import { hasCustomId } from 'discord.js-mvc/@types/types'
+import { hasCustomId } from 'discord.js-mvc'
 
 export function logger(options: winston.LoggerOptions = {}): Logger {
   const logger = winston.createLogger(options)

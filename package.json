@@ -18,6 +18,7 @@
         "dev": "lerna run dev --stream",
         "docs:dev": "lerna run dev --scope docs",
         "docs:build": "lerna run build --scope docs",
+        "build:publishable": "lerna run build --no-private --stream",
         "build": "lerna run build",
         "publish": "yarn build && lerna publish --no-private"
     },

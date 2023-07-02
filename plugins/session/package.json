@@ -22,17 +22,19 @@
     "license": "MIT",
     "main": "lib/index.ts",
     "directories": {
-        "lib": "lib"
+        "*": "lib",
+        "types": "types"
     },
     "files": [
-        "lib"
+        "lib",
+        "types"
     ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
     },
     "scripts": {
-        "test": "node ./__tests__/session.test.js"
+        "build": "tsc"
     },
     "bugs": {
         "url": "https://github.com/3h04m1/discord.js-mvc/issues"
