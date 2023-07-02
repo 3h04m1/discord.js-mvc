@@ -8,5 +8,7 @@ export { type Controller } from './Controllers'
 // utils
 export { registerGlobalCommands, registerGuildCommands} from './utils/registerCommands'
 export {BaseContext,InteractionContext,MessageContext} from './base/Context'
+export { hasCustomId } from './types'
+export { Plugin } from './base/Context'
 
 
