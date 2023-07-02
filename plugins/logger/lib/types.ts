@@ -7,5 +7,6 @@ export type LoggerFlavor = {
 
 export interface Logger {
     middleware: Middleware,
-    plugin: <T>(ctx: T) => void
+    plugin: <T>(ctx: T) => void,
+    logger: WinstonLogger
 }

@@ -3,7 +3,7 @@ import { Logger } from './types'
 import chalk from 'chalk'
 import { hasCustomId } from 'discord.js-mvc'
 
-export function logger(options: winston.LoggerOptions = {}): Logger {
+export function loggerConstructor(options: winston.LoggerOptions = {}): Logger {
   const logger = winston.createLogger(options)
 
   return {
@@ -32,6 +32,7 @@ export function logger(options: winston.LoggerOptions = {}): Logger {
     },
     plugin: (ctx) => {
         (ctx as any).logger = logger
-    }
+    },
+    logger: logger
   }
 }

@@ -1,2 +1,2 @@
-export {logger} from './logger'
+export {loggerConstructor} from './logger'
 export {LoggerFlavor} from './types'
