@@ -19,8 +19,7 @@
         "docs:dev": "lerna run dev --scope docs",
         "docs:build": "lerna run build --scope docs",
         "build:npm": "lerna run build --no-private --stream",
-        "build": "lerna run build",
-        "publish": "yarn build:npm && lerna publish --no-private"
+        "build": "lerna run build"
     },
     "version": "1.0.0"
 }
