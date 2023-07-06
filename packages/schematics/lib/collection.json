@@ -1,0 +1,10 @@
+{
+    "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+        "new": {
+            "description": "Creates a new Discord.js MVC Bot Project",
+            "factory": "./new/index#newBot",
+            "schema": "./new/schema.json"
+        }
+    }
+}

@@ -1,11 +1,11 @@
-# `cli`
+# `schematics`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cli = require('cli');
+const schematics = require('schematics');
 
 // TODO: DEMONSTRATE API
 ```
