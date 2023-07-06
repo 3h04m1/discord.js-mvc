@@ -33,5 +33,10 @@
         "commander": "^11.0.0",
         "inquirer": "^8.0.0",
         "ora": "^6.3.1"
+    },
+    "gitHead": "29be24a2b31be1819b2334e53e57e8033567f8f1",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
     }
 }
