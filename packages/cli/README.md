@@ -1,11 +1,11 @@
-# `@discord.js-mvc/cli`
+# `cli`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cli = require('@discord.js-mvc/cli');
+const cli = require('cli');
 
 // TODO: DEMONSTRATE API
 ```
