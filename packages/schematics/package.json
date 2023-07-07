@@ -33,5 +33,6 @@
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "access": "public"
-    }
+    },
+    "schematics": "./dist/collection.json"
 }
