@@ -1,6 +1,6 @@
 {
     "name": "@discordjs-mvc/schematics",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "> TODO: description",
     "author": "max <max.vojtkov@gmail.com>",
     "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",
@@ -34,7 +34,7 @@
         "@angular-devkit/schematics": "^16.1.3",
         "cpx": "^1.5.0"
     },
-    "gitHead": "29be24a2b31be1819b2334e53e57e8033567f8f1",
+    "gitHead": "e7861a1004d3b675eab981289f8ad19be85a13f6",
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "access": "public"
