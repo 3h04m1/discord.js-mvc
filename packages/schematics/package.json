@@ -1,11 +1,11 @@
 {
-    "name": "@discord.js-mvc/schematics",
+    "name": "@discordjs-mvc/schematics",
     "version": "1.0.5",
-    "description": "> TODO: description",
+    "description": "Schematics for discord.js-mvc code generation",
     "author": "max <max.vojtkov@gmail.com>",
-    "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",
+    "homepage": "https://discordjs-mvc.js.org",
     "license": "ISC",
-    "main": "lib/schematics.js",
+    "main": "dist/collection.json",
     "types": "types",
     "directories": {
         "dist": "dist",
@@ -34,7 +34,7 @@
         "@angular-devkit/schematics": "^16.1.3",
         "cpx": "^1.5.0"
     },
-    "gitHead": "571df8629818e93d5931bc27e281c181fa9c2460",
+    "gitHead": "3cc84d74bc09a3d447c2aebe62abdc4b4c0cdec3",
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "access": "public"
