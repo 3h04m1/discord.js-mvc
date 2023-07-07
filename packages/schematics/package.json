@@ -1,16 +1,19 @@
 {
     "name": "@discordjs-mvc/schematics",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "> TODO: description",
     "author": "max <max.vojtkov@gmail.com>",
     "homepage": "https://github.com/3h04m1/discord.js-mvc#readme",
     "license": "ISC",
     "main": "lib/schematics.js",
+    "types": "types",
     "directories": {
-        "dist": "dist"
+        "dist": "dist",
+        "types": "types"
     },
     "files": [
-        "dist"
+        "dist",
+        "types"
     ],
     "repository": {
         "type": "git",
