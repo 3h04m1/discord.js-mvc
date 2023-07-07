@@ -1,6 +1,6 @@
 {
     "name": "@discordjs-mvc/schematics",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Schematics for discord.js-mvc code generation",
     "author": "max <max.vojtkov@gmail.com>",
     "homepage": "https://discordjs-mvc.js.org",
