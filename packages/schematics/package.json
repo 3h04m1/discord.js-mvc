@@ -7,13 +7,8 @@
     "license": "ISC",
     "main": "dist/collection.json",
     "types": "types",
-    "directories": {
-        "dist": "dist",
-        "types": "types"
-    },
     "files": [
-        "dist",
-        "types"
+        "dist/**/*"
     ],
     "repository": {
         "type": "git",
