@@ -1,12 +1,13 @@
 import { type Middleware } from '../../Middleware/types'
 import { type IRouteGroupData } from './types'
-import { type Route } from '.'
+import { Route } from '.'
+import { MaybeArray } from '../../types'
 
 /**
  * Manages routes and provides utility methods for route grouping and middleware handling.
  */
 export default class RouteManager {
-  private readonly routes: Route<any>[] = [];
+  private readonly routes: Route<any>[] = []
 
   /**
    * Creates a group of routes with a common prefix and optional middlewares.
@@ -15,15 +16,28 @@ export default class RouteManager {
    * @returns {Route[]} The grouped routes.
    */
   public static group(data: IRouteGroupData): Route<any>[] {
-    const routes: Route[] = [];
-    const prefix = data.prefix ?? '';
-    const middlewares = data.middlewares ?? [];
-    for (const route of data.routes) {
-      route.name = prefix + route.name;
-      route.use(...middlewares);
-      routes.push(route);
+    const routes: Route<any>[] = []
+    const prefix = data.prefix ?? ''
+    const middlewares = data.middlewares ?? []
+    for (const route of this.flatten(data.routes)) {
+      route.name = prefix + route.name
+      route.use(...middlewares)
+      routes.push(route)
     }
-    return routes;
+
+    return routes
+  }
+
+  public static flatten(routes: MaybeArray<Route<any>[]>): Route<any>[] {
+    const flattened: Route<any>[] = []
+    for (const route of routes) {
+      if (Array.isArray(route)) {
+        flattened.push(...route)
+      } else {
+        flattened.push(route)
+      }
+    }
+    return flattened
   }
 
   /**
@@ -33,8 +47,8 @@ export default class RouteManager {
    * @returns {RouteManager} The current RouteManager instance.
    */
   private add(...route: Route[]): RouteManager {
-    this.routes.push(...route);
-    return this;
+    this.routes.push(...route)
+    return this
   }
 
   /**
@@ -46,9 +60,9 @@ export default class RouteManager {
    */
   public static prefix(prefix: string, routes: Route[]): RouteManager {
     for (const route of routes) {
-      route.name = prefix + route.name;
+      route.name = prefix + route.name
     }
-    return new RouteManager().add(...routes);
+    return new RouteManager().add(...routes)
   }
 
   /**
@@ -59,9 +73,9 @@ export default class RouteManager {
    */
   public prefix(prefix: string): RouteManager {
     for (const route of this.routes) {
-      route.name = prefix + route.name;
+      route.name = prefix + route.name
     }
-    return this;
+    return this
   }
 
   /**
@@ -71,11 +85,14 @@ export default class RouteManager {
    * @param {Route[]} routes - The routes to which the middleware will be added.
    * @returns {RouteManager} A new RouteManager instance with the added middleware.
    */
-  public static middleware(middleware: Middleware<any>, routes: Route[]): RouteManager {
+  public static middleware(
+    middleware: Middleware<any>,
+    routes: Route[]
+  ): RouteManager {
     for (const route of routes) {
-      route.use(middleware);
+      route.use(middleware)
     }
-    return new RouteManager().add(...routes);
+    return new RouteManager().add(...routes)
   }
 
   /**
@@ -86,8 +103,8 @@ export default class RouteManager {
    */
   public middleware(middleware: Middleware<any>): RouteManager {
     for (const route of this.routes) {
-      route.use(middleware);
+      route.use(middleware)
     }
-    return this;
+    return this
   }
 }

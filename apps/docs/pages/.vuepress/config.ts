@@ -18,12 +18,17 @@ export default defineUserConfig({
                 link: '/examples/',
             },
             {
+                text: 'Plugins',
+                link: '/plugins/',
+                children: []
+            },
+            {
                 text: 'Contribute',
                 link: '/contribute/',
             },
             {
                 text: 'View on GitHub',
-                link: 'https://github.com/'
+                link: 'https://github.com/3h04m1/discord.js-mvc'
             }
         ],
         sidebar,

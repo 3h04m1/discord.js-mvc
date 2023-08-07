@@ -1,9 +1,9 @@
 import {Command} from "commander";
-import { type AbstractAction } from "../actions/abstract.action";
+import { AbstractActionConstructor } from "../actions/abstract.action";
 
 export abstract class AbstractCommand {
     constructor(
-        public action: AbstractAction
+        public action: AbstractActionConstructor
     ) {}
 
     public abstract load(program: Command): void;

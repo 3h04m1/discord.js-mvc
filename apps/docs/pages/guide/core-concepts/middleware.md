@@ -2,6 +2,17 @@
 The middleware is a function that will be executed before a specific route or before all routes.
 Middlewares can be used to do some checks before executing the route or to do some actions that are common between routes
 (eg. Logging the interaction).
+
+You can add create a middleware in 2 ways:
+1. Manually create a middleware function and pass it to the `use` method.
+2. Use the `generate` command to generate a middleware file and then export the middleware function from it.
+
+```bash
+djs-mvc generate middleware middleware1
+# or
+djs-mvc g m middleware1
+```
+
 ## Creating a middleware
 To create a middleware, you need to create a function that takes 2 parameters: `interaction` and `next`.
 The `interaction` parameter is the interaction that will be executed after the middleware.

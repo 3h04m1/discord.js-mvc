@@ -1,6 +1,7 @@
 import { BaseContext } from '../../base/Context';
 import { Middleware } from '../../Middleware/types';
 import { Route } from '.';
+import { MaybeArray } from '../../types';
 
 // RouteName can be a string or a RegExp or a string describing a RegExp
 export type RouteName = string | RegExp | string;
@@ -22,5 +23,5 @@ export interface IRouteGroupData<T extends BaseContext = BaseContext> {
   /**
    * Array of routes to be grouped.
    */
-  routes: Array<Route<T>>;
+  routes: MaybeArray<Array<Route<T>>>;
 }

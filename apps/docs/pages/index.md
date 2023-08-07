@@ -18,11 +18,15 @@ The framework is designed to be simple and straightforward, allowing you to focu
 
 - **Plugins:** Discord.js MVC offers support for plugins with a built-in Context that wraps the Discord.js Interactions and Message Components APIs. This allows you to create plugins that can be used to extend the functionality of your bot. Dicord.js MVC also includes a small collection of plugins that can be used out of the box, also you can submit your own plugins to the [Discord.js MVC Plugins](https://github.com/3h04m1/discord.js-mvc)
 
+- **TypeScript Support:** Discord.js MVC supports TypeScript out of the box, allowing you to write type-safe code and take advantage of the latest language features. You can also use JavaScript if you prefer.
+
+- **[Powerfull CLI](/cli):** Discord.js MVC comes with a powerful CLI that allows you to quickly create new bots and generate new plugins, controllers, and middlewares. It will do all the boring work for you, so you can focus on building your bot.
+
 ## Getting Started and Tutorials
 
-To get started with Discord.js MVC, refer to the comprehensive [Getting Started](/docs/getting-started) guide. It will walk you through the initial setup and provide step-by-step instructions for creating your first bot using the framework.
+To get started with Discord.js MVC, refer to the comprehensive [Getting Started](/guide/getting-started/installation) guide. It will walk you through the initial setup and provide step-by-step instructions for creating your first bot using the framework.
 
-Once you are familiar with the basics, explore the [Tutorials](/docs/guide) section, which covers various topics and demonstrates different aspects of building bots with the framework. These tutorials will help you dive deeper into the framework's features and guide you through more advanced use cases.
+Once you are familiar with the basics, explore the [Core Concepts](/guide/core-concepts/) and [Examples](examples/ping-pong) section, which covers various topics and demonstrates different aspects of building bots with the framework. These tutorials will help you dive deeper into the framework's features and guide you through more advanced use cases.
 
 ::: warning
 Please note that Discord.js MVC is currently under active development. While all the existing features are functional, it's possible that future updates may introduce breaking changes. Stay tuned for updates and check the documentation regularly for the latest information.
