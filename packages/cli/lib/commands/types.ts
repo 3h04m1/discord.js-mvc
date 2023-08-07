@@ -1,0 +1,1 @@
+export type SchematicNames = "controller" | "plugin" | "app" | "middleware";

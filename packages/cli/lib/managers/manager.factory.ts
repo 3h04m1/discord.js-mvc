@@ -14,7 +14,7 @@ export const managerFactory = (manager: PackageManagers | string) => {
     case PackageManagers.PNPM:
       throw new PnpmManager()
     default:
-      error(
+      throw new Error(
         MESSAGES.INVALID_INPUT(
           'packageManager',
           manager,

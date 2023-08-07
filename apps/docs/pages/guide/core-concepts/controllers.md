@@ -3,6 +3,15 @@ Controllers are the foundation of your application's business logic.
 The are responsible for handling the interaction, they are the final destination of the interaction.
 ___
 `discord.js-mvc` doesn't provide any built-in controllers, but it provides a way to create and type your own controllers.
+
+There are 2 methods to create a controller:
+1. You can manually create a controller function and pass it to the `Route` class.
+2. You can use the `generate` command to generate a controller file and then export the controller function from it.
+```bash
+djs-mvc generate controller ping
+# or
+djs-mvc g c ping
+```
 ## Controller
 A controller is a function that will be executed when the route is triggered.
 It can be an anonymous function or a function that you create in a separate file.

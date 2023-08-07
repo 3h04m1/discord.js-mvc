@@ -1,6 +1,8 @@
-import { readFileSync } from 'node:fs';
+import findPkg from "find-package-json";
 
 export function getPackageJson() {
-    const path = process.cwd() + '/package.json';
-    return JSON.parse(readFileSync(path, 'utf-8'));
+    const iterator = findPkg(process.cwd());
+    for (const pkg of iterator) {
+        if (pkg.__path) return pkg;
+    }
 }

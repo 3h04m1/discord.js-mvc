@@ -6,6 +6,16 @@ The plugins are accessible from the `Context` object and can be used in the cont
 A plugin is a basic function that takes a `Context` object as a parameter and return nothing. The plugin can be asynchronous or not.
 DiscordJs MVC provides a `PLugin` type to help you create your own plugins.
 
+You can create a plugin in 2 ways:
+1. Create manually a plugin function and pass it to the `plugin` method of the router.
+2. Use the `generate` command to generate a plugin file and then export the plugin function from it.
+
+```bash
+djs-mvc generate plugin myPlugin
+# or
+djs-mvc g p myPlugin
+```
+
 ```ts
 import { Plugin } from 'discordjs-mvc';
 import { Context } from './context';

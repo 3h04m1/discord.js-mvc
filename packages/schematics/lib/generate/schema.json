@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "NewBot",
+    "title": "New Bot",
+    "description": "Creates a new Discord.js MVC bot",
+    "type": "object",
+    "properties": {
+        "schema": {
+            "description": "Type of file to generate, ex: controller, plugin, app, middleware",
+            "type": "string",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            },
+            "enum": [
+                "controller",
+                "plugin",
+                "app",
+                "middleware"
+            ]
+        },
+        "name": {
+            "description": "Name of the file to generate",
+            "type": "string",
+            "$default": {
+                "$source": "argv",
+                "index": 1
+            }
+        },
+        "typescript": {
+            "description": "Use TypeScript?",
+            "type": "boolean"
+        }
+    }
+}

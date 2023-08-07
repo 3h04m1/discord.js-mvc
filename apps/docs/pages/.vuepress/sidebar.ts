@@ -21,6 +21,7 @@ export const sidebar: SidebarConfig = [
                 '/guide/core-concepts/middleware',
                 '/guide/core-concepts/models',
                 '/guide/core-concepts/plugins',
+                '/guide/core-concepts/apps',
             ]
     },
     {
@@ -28,5 +29,23 @@ export const sidebar: SidebarConfig = [
         children: [
             '/examples/ping-pong',
         ]
-    }
+    },
+    {
+        text: "CLI",
+        children: [
+            {
+                text: "How to use the CLI",
+                link: "cli"
+            }
+        ]
+    },
+    {
+        text: 'Advanced Usage',
+        children: [
+            '/guide/advanced-usage',
+            '/guide/advanced-usage/project-structure',
+            '/guide/advanced-usage/plugins',
+            '/guide/advanced-usage/services',
+        ]
+    },
 ]
