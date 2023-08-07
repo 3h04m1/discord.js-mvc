@@ -15,7 +15,7 @@ export default class RouteManager {
    * @param {IRouteGroupData} data - The data for route grouping.
    * @returns {Route[]} The grouped routes.
    */
-  public static group(data: IRouteGroupData): Route<any>[] {
+  public static group(data: IRouteGroupData<any>): Route<any>[] {
     const routes: Route<any>[] = []
     const prefix = data.prefix ?? ''
     const middlewares = data.middlewares ?? []
