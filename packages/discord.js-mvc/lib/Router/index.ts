@@ -43,11 +43,11 @@ export class Router {
     return this
   }
 
-  public getRoute(path: string): Route<InteractionContext> | undefined {
+  public getRoute(path: string): Route | undefined {
     for (const route of this._routes) {
       const matchFN = match(route.name)
-      if (matchFN(path) !== false) {
-        return route as Route<InteractionContext>
+      if (!!matchFN(path)) {
+        return route as Route
       }
     }
   }

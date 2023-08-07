@@ -1,50 +1,50 @@
 {
-    "name": "@discordjs-mvc/logger",
-    "version": "1.0.4",
-    "description": "> TODO: description",
-    "author": "max <max>",
-    "homepage": "https://discordjs-mvc.js.org",
-    "license": "ISC",
-    "main": "dist/index.js",
-    "private": false,
-    "keywords": [
-        "discord",
-        "discord.js",
-        "mvc",
-        "bot",
-        "discord.js-mvc",
-        "discordjs-mvc",
-        "discord-mvc"
-    ],
-    "directories": {
-        "*": "lib",
-        "types": "types"
-    },
-    "files": [
-        "lib",
-        "types"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
-    },
-    "scripts": {
-        "build": "tsc"
-    },
-    "bugs": {
-        "url": "https://github.com/3h04m1/discord.js-mvc/issues"
-    },
-    "devDependencies": {
-        "typescript": "^5.1.6"
-    },
-    "dependencies": {
-        "chalk": "^5.3.0",
-        "winston": "^3.9.0"
-    },
-    "gitHead": "6e709bb13bd9c69eff80cfe23c7d8d601607d7d9",
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org/",
-        "access": "public"
-    },
+  "name": "@discordjs-mvc/logger",
+  "version": "1.0.4",
+  "description": "> TODO: description",
+  "author": "max <max>",
+  "homepage": "https://discordjs-mvc.js.org",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "private": false,
+  "keywords": [
+    "discord",
+    "discord.js",
+    "mvc",
+    "bot",
+    "discord.js-mvc",
+    "discordjs-mvc",
+    "discord-mvc"
+  ],
+  "directories": {
+    "*": "lib",
     "types": "types"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/3h04m1/discord.js-mvc/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "winston": "^3.9.0"
+  },
+  "gitHead": "6e709bb13bd9c69eff80cfe23c7d8d601607d7d9",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "types": "types"
 }

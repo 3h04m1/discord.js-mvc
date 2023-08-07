@@ -8,31 +8,32 @@ export function loggerConstructor(options: winston.LoggerOptions = {}): Logger {
 
   return {
     middleware: async (ctx, next) => {
-        const startTime = Date.now()
-        await next()
-        const endTime = Date.now()
-        const time = endTime - startTime
-        let messageLog: string|undefined = undefined
-        if (ctx.isInteraction()) {
-            const interaction = ctx.interaction
-            if (interaction.isCommand()) {
-                messageLog = `${chalk.bgCyan(interaction.type)} ${chalk.blueBright(interaction.commandName)} (${interaction.user.username}) ${chalk.greenBright(time)}ms`
-            } else if (hasCustomId(interaction)) {
-                messageLog = `${chalk.bgCyan(interaction.type)} ${chalk.blueBright(interaction.customId)} (${interaction.user.username}) ${chalk.greenBright(time)}ms`
-            } else {
-                messageLog = `${chalk.bgCyan(interaction.type)} (${interaction.user.username}) ${chalk.greenBright(time)}ms`
-            }
-        } else if (ctx.isMessage()){
-            const message = ctx.message
-            messageLog = `${chalk.bgCyan('message')} ${chalk.blueBright(message.content)} (${message.author.username}) ${chalk.greenBright(time)}ms`
-        }
-        if (messageLog) {
-            logger.info(messageLog)
-        }
+      const startTime = Date.now()
+      await next()
+      const endTime = Date.now()
+      const time = endTime - startTime
+      let messageLog: string | undefined = undefined
+      const interaction = ctx.interaction
+      if (interaction.isCommand()) {
+        messageLog = `${chalk.bgCyan(interaction.type)} ${chalk.blueBright(
+          interaction.commandName
+        )} (${interaction.user.username}) ${chalk.greenBright(time)}ms`
+      } else if (hasCustomId(interaction)) {
+        messageLog = `${chalk.bgCyan(interaction.type)} ${chalk.blueBright(
+          interaction.customId
+        )} (${interaction.user.username}) ${chalk.greenBright(time)}ms`
+      } else {
+        messageLog = `${chalk.bgCyan(interaction.type)} (${
+          interaction.user.username
+        }) ${chalk.greenBright(time)}ms`
+      }
+      if (messageLog) {
+        logger.info(messageLog)
+      }
     },
     plugin: (ctx) => {
-        (ctx as any).logger = logger
+      ;(ctx as any).logger = logger
     },
-    logger: logger
+    logger: logger,
   }
 }
