@@ -5,6 +5,12 @@
             "description": "Creates a new Discord.js MVC Bot Project",
             "factory": "./new/index#newBot",
             "schema": "./new/schema.json"
+        },
+        "generate": {
+            "description": "Generates a new MVC Bot Component",
+            "factory": "./generate/index#generateComponent",
+            "schema": "./generate/schema.json",
+            "aliases": ["g"]
         }
     }
 }
