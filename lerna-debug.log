@@ -1,0 +1,8 @@
+87 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin main
+87 error ERROR: Permission to 3h04m1/discord.js-mvc.git denied to maxim-voitcov.
+87 error fatal: Could not read from remote repository.
+87 error
+87 error Please make sure you have the correct access rights
+87 error and the repository exists.
+87 error     at makeError (/home/max/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
+87 error     at handlePromise (/home/max/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/index.js:118:26)
