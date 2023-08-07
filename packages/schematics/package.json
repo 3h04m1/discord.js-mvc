@@ -35,4 +35,3 @@
         "access": "public"
     },
     "schematics": "./dist/collection.json"
-}
