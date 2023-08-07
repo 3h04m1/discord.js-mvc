@@ -1,37 +1,38 @@
 {
-    "name": "@discordjs-mvc/schematics",
-    "version": "1.0.10",
-    "description": "Schematics for discord.js-mvc code generation",
-    "author": "max <max.vojtkov@gmail.com>",
-    "homepage": "https://discordjs-mvc.js.org",
-    "license": "ISC",
-    "main": "dist/collection.json",
-    "types": "types",
-    "files": [
-        "dist/**/*"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
-    },
-    "scripts": {
-        "postbuild": "cpx  \"lib/**/*.json\" dist --include-empty-dirs && cpx \"lib/**/files/**/*\" dist --include-empty-dirs && cpx \"lib/**/files/**/.*\" dist --include-empty-dirs",
-        "build": "tsc"
-    },
-    "bugs": {
-        "url": "https://github.com/3h04m1/discord.js-mvc/issues"
-    },
-    "devDependencies": {
-        "typescript": "^5.1.6"
-    },
-    "dependencies": {
-        "@angular-devkit/core": "^16.1.3",
-        "@angular-devkit/schematics": "^16.1.3",
-        "cpx": "^1.5.0"
-    },
-    "gitHead": "3cc84d74bc09a3d447c2aebe62abdc4b4c0cdec3",
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org/",
-        "access": "public"
-    },
-    "schematics": "./dist/collection.json"
+  "name": "@discordjs-mvc/schematics",
+  "version": "1.0.10",
+  "description": "Schematics for discord.js-mvc code generation",
+  "author": "max <max.vojtkov@gmail.com>",
+  "homepage": "https://discordjs-mvc.js.org",
+  "license": "ISC",
+  "main": "dist/collection.json",
+  "types": "types",
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3h04m1/discord.js-mvc.git"
+  },
+  "scripts": {
+    "postbuild": "cpx  \"lib/**/*.json\" dist --include-empty-dirs && cpx \"lib/**/files/**/*\" dist --include-empty-dirs && cpx \"lib/**/files/**/.*\" dist --include-empty-dirs",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/3h04m1/discord.js-mvc/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^16.1.3",
+    "@angular-devkit/schematics": "^16.1.3",
+    "cpx": "^1.5.0"
+  },
+  "gitHead": "3cc84d74bc09a3d447c2aebe62abdc4b4c0cdec3",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "schematics": "./dist/collection.json"
+}

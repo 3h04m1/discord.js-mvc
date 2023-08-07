@@ -1,8 +1,19 @@
-87 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin main
-87 error ERROR: Permission to 3h04m1/discord.js-mvc.git denied to maxim-voitcov.
-87 error fatal: Could not read from remote repository.
-87 error
-87 error Please make sure you have the correct access rights
-87 error and the repository exists.
-87 error     at makeError (/home/max/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/lib/error.js:60:11)
-87 error     at handlePromise (/home/max/.config/yarn/global/node_modules/@lerna/child-process/node_modules/execa/index.js:118:26)
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '7.1.1',
+0 silly argv   '$0': '/home/max/.yarn/bin/lerna'
+0 silly argv }
+1 notice cli v7.1.1
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath /home/max/dev/discord.js-mvc
+4 error Error: CloseBraceExpected in /home/max/dev/discord.js-mvc/packages/schematics/package.json at 38:1
+4 error [0m [90m 36 | [39m    },[0m
+4 error [0m [90m 37 | [39m    "schematics": "./dist/collection.json"[0m
+4 error [0m[31m[1m>[22m[39m[90m 38 | [39m[0m
+4 error [0m [90m    | [39m[31m[1m^[22m[39m[0m
+4 error
+4 error     at parseJson (/home/max/.config/yarn/global/node_modules/nx/src/utils/json.js:25:15)
+4 error     at readJsonFile (/home/max/.config/yarn/global/node_modules/nx/src/utils/fileutils.js:23:37)
+4 error     at /home/max/.config/yarn/global/node_modules/nx/src/project-graph/utils/retrieve-workspace-files.js:32:46
+4 error     at Generator.next (<anonymous>)
