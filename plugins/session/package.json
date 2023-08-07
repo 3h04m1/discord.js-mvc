@@ -1,6 +1,6 @@
 {
     "name": "@discordjs-mvc/session",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Session plugin for discordjs-mvc",
     "private": false,
     "keywords": [
