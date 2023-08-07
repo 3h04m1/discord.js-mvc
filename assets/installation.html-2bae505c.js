@@ -1,0 +1,20 @@
+import{_ as i,r as t,o as c,c as l,b as a,e as n,d,a as s}from"./app-ab3f265b.js";const o={},r=s(`<h1 id="installation" tabindex="-1"><a class="header-anchor" href="#installation" aria-hidden="true">#</a> Installation</h1><p>You can start using Discord.js MVC by adding it to your project using npm, yarn or pnpm. or you can create a new project using the CLI.</p><h2 id="with-cli" tabindex="-1"><a class="header-anchor" href="#with-cli" aria-hidden="true">#</a> With CLI</h2><p>You can install the CLI globally using npm, yarn or pnpm.</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># npm</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> @discordjs-mvc/cli
+<span class="token comment"># yarn</span>
+<span class="token function">yarn</span> global <span class="token function">add</span> @discordjs-mvc/cli
+<span class="token comment"># pnpm</span>
+<span class="token function">pnpm</span> <span class="token function">add</span> <span class="token parameter variable">-g</span> @discordjs-mvc/cli
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Then you can create a new project using the CLI.</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>djs-mvc new myBot
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="without-cli" tabindex="-1"><a class="header-anchor" href="#without-cli" aria-hidden="true">#</a> Without CLI</h2><p>If you don&#39;t want to use the CLI, you can create a new project manually.</p><h3 id="requirements" tabindex="-1"><a class="header-anchor" href="#requirements" aria-hidden="true">#</a> Requirements</h3>`,10),p={href:"https://discord.js.org/",target:"_blank",rel:"noopener noreferrer"},u=s(`<div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># npm</span>
+<span class="token function">npm</span> <span class="token function">install</span> discord.js
+<span class="token comment"># yarn</span>
+<span class="token function">yarn</span> <span class="token function">add</span> discord.js
+<span class="token comment"># pnpm</span>
+<span class="token function">pnpm</span> <span class="token function">add</span> discord.js
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="installation-1" tabindex="-1"><a class="header-anchor" href="#installation-1" aria-hidden="true">#</a> Installation</h3><p>You can install this package using npm, yarn or pnpm.</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token comment"># npm</span>
+<span class="token function">npm</span> <span class="token function">install</span> discord.js-mvc
+<span class="token comment"># yarn</span>
+<span class="token function">yarn</span> <span class="token function">add</span> discord.js-mvc
+<span class="token comment"># pnpm</span>
+<span class="token function">pnpm</span> <span class="token function">add</span> discord.js-mvc
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,4);function m(h,v){const e=t("ExternalLinkIcon");return c(),l("div",null,[r,a("p",null,[n("This is an aditional package for the "),a("a",p,[n("discord.js"),d(e)]),n(" library, so you need to install it first.")]),u])}const k=i(o,[["render",m],["__file","installation.html.vue"]]);export{k as default};

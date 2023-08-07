@@ -1,0 +1,1 @@
+import{_ as a,o as d,c as r,b as e,e as t}from"./app-ab3f265b.js";const s={},c=e("h1",{id:"middlewares",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#middlewares","aria-hidden":"true"},"#"),t(" Middlewares")],-1),o=[c];function i(n,_){return d(),r("div",null,o)}const h=a(s,[["render",i],["__file","middleware.html.vue"]]);export{h as default};
